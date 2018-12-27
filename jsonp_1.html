@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+</body>
+<script>
+  function callback() {
+    console.log('今天停水');
+  }
+</script>
+<script src="http://www.bestqingshan.top/data.js" async></script>
+<!-- <script src="./data.js" async></script> -->
+
+</html>
+/*
+jsonp原理：利用script标签src的远程访问，在远端服务器通过拼串或直接调用的形式，调用了本地的同名js函数；
+ajax调用jsonp注意事项：
+1、method必须是GET
+2、datatype必须是jsonp
+3、jsonp用来指定远端服务器的调用函数名，默认不写为callback
+4、jsonpCallback用来指定额外调用的函数名字
+*/
+/*
+
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods:GET,POST,PUT,DELETE,HEAD,OPTION
+Access-Control-Request-Headers:X-PINGOTHER, Content-Type
+参考网址：https://cloud.tencent.com/developer/section/1189900
+*/
+
+/*
+async 属性规定一旦脚本可用，则会异步执行。
+
+注释：async 属性仅适用于外部脚本（只有在使用 src 属性时）。
+
+注释：有多种执行外部脚本的方法：
+
+如果 async="async"：脚本相对于页面的其余部分异步地执行（当页面继续进行解析时，脚本将被执行）
+如果不使用 async 且 defer="defer"：脚本将在页面完成解析时执行
+如果既不使用 async 也不使用 defer：在浏览器继续解析页面之前，立即读取并执行脚本
+*/
+/*
+Vue组件：vue设计目的是模块化、组件化，尽量将通用的代码块封装成组件去使用，案例：菜谱导航栏。vue如何使用组件。
+import back from './back.vue';
+<back></back>
+var app = new Vue({
+components:{
+back
+}
+})
+*/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./jquery-3.0.0/jquery-3.0.0.min.js"></script>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  // JSONP一定是GET请求
+  function cb(data) {
+    console.log('------', data);
+  }
+  $.ajax({
+    type: "GET",
+    url: "https://www.bestqingshan.top/demo/ajaxJsonp.php",
+    dataType: "jsonp",
+    // jsonpCallback: 'cb', //指定额外调用的函数名字，如果不需要可以不写该参数
+    jsonp: 'cb', //指定callback的名字，默认为callback
+    success: function (response) {
+      console.log(response);
+    }
+  });
+</script>
+
+</html>
